@@ -27,5 +27,6 @@ git push
 
 one line method of pushing changes:
 git commit -am "Your commit message here" && git push
+## ahh this doesn't really work
 
 
