@@ -7,6 +7,7 @@ hihihih
 hi
 hello
 
+![image](https://github.com/FaZeDrug/fazedrug.github.io/assets/65751667/9161ae49-3ebc-4ac1-ab32-70004bc91de9)
 
 yoh
 
