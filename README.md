@@ -7,7 +7,7 @@ hihihih
 hi
 hello
 
-
+wtf
 yoh
 
 ksdhisdojfjsdiofjios
@@ -29,7 +29,7 @@ one line method of pushing changes:
 git commit -am "Your commit message here" && git push
 ## ahh this doesn't really work
 
-daily commitagain! !!!!!!!!!!!!!!!!!!
+daily commitagain! !!!!!!!!!!!!!!!!!!!!!
 
 tips: use sticky header
 more info here: https://chat.openai.com/share/86ab11b3-2fc1-44b8-8a76-7e57d2f955a0
