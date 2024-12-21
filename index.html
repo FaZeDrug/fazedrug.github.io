@@ -9,10 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
   </head>
 
   <body>
+    <!-- Added cursor elements -->
+    <div class="cursor-circle"></div>
+    <div class="cursor-dot"></div>
+
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
@@ -23,7 +27,6 @@
                   Natasha Tran
                 </p>
                 <p style="text-align: justify;">I am a third-year Computer Science undergraduate student at UC San Diego.
-  
                 </p>
                 <p style="text-align: justify;">
                   I am always looking for new opportunities for growth and ways to solve problems, which is why I am interested in CS! I hope to participate in the ever-growing development of technology through my ambitions.
@@ -167,5 +170,31 @@
         </td>
       </tr>
     </table>
+
+    <!-- Add cursor script -->
+    <script>
+      const circle = document.querySelector('.cursor-circle');
+      const dot = document.querySelector('.cursor-dot');
+      let mouseX = 0;
+      let mouseY = 0;
+      let circleX = 0;
+      let circleY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+      });
+
+      function animate() {
+          requestAnimationFrame(animate);
+          circleX += (mouseX - 25 - circleX) * 0.1;
+          circleY += (mouseY - 25 - circleY) * 0.1;
+          dot.style.top = `${mouseY - 1}px`;
+          dot.style.left = `${mouseX - 1}px`;
+          circle.style.top = `${circleY}px`;
+          circle.style.left = `${circleX}px`;
+      }
+      animate();
+    </script>
   </body>
 </html>
