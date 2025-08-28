@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo"> NT </div>
+                <button id="theme-toggle" class="theme-toggle">🌞</button> 
+            </div>
+
+                <!-- hamburger icon here -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            
+            <ul class = "menu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <!-- <li><a href="experiments.html">experiments</a></li> experiments is kinda bad -->
+            </ul>
+        </nav>
+        <!-- <button>Toggle Theme</button> -->
+        <div class="navbar-line"></div> <!-- the black line in header -->
+    </header>
+    <main>
+        <!--contains both left and right side (basically errything below the navbar)-->
+        <div class="allcontainer">
+            <div class="leftside">
+                <div class="aboutme">
+                    <h2>ABOUT ME</h2>
+                    <div class="about-content">
+                        <img src="balenci.jpg" alt="Selfie of Natasha with cartoon blush">
+                        <p> Hi, I’m Natasha! I’m a CS student from San Diego who loves all things cute and creative. When I’m not coding, you’ll find me admiring Rilakkuma merch, perfecting my Douyin inspired makeup, or working on fun projects that blend tech and aesthetics. I enjoy learning new things, solving problems, and making life a little more stylish, both online and offline. </p>
+                    </div>
+                </div>
+        
+                <div class="careergoals">
+                    <h2>CAREER GOALS</h2>
+                    <p> I like to build cool and useful things. Whether it’s a fun side project or something more serious, I like creating software. I’m always learning, always improving, and always looking for the next thing to work on. I am an aspiring software engineer because I am curious about creating software that improves the lives of others.</p>
+                </div>
+
+                <div class="funfacts">
+                    <h2>FUN FACTS</h2>
+                    <ul>
+                        <li> I am three connections away from the richest man in the world</li>
+                        <li> My old laptop started smoking a few times (the charger port caught on fire) </li>
+                        <li> I have so many coding project ideas, but unfortunately, I am limited by time</li>
+                        <li> I prefer silver jewelry over gold </li>
+                        <li> I love Pinterest </li>
+                        <li> I'm into fragrances </li>
+                        <li> Ever since I was in high school, I've always wanted to be a SWE @ FAANG </li>
+
+
+                    </ul>
+                </div>
+                
+            </div>
+            
+            
+            <div class="rightside">
+                <h2>FUN STUFF</h2>
+                <div class="archery">
+                    <h3> Archery</h3>
+                    <video width="320" height="240" controls>
+                        <source src="archeryvid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p> I sometimes do archery. Sometimes. When I have time, I do archery.</p>
+                </div>
+            
+                <div class="FAQ">
+    
+                    <h3>FAQs (Frequently Asked Questions)</h3>
+        
+                    <details>
+                        <summary>What is your goal as a software engineer?</summary>
+                        <p>To build impactful applications that solve real-world problems.</p>
+                    </details>
+                
+                    <details>
+                        <summary>What are your hobbies?</summary>
+                        <p>Doing (my own) nails, webdevving, reading, going to the gym, and exploring new technologies.</p>
+                    </details>
+                
+                    <details>
+                        <summary>What are your favorite programming languages?</summary>
+                        <ol>
+                            <li>C++. Truly the best OOP language, <code>vectors</code> are great!</li>
+                            <li> Python is also really cool!</li>
+                        </ol>
+                    </details>
+                    <details>
+                        <summary>When did you know you wanted to be a computer scientist?</summary>
+                        <p>Truthfully, when I was about 11 years old. I was obsessed with Roblox and I have been on the computer playing games, watching videos, etc since I was three and I couldn't imagine picking another career. I wanted to be a surgeon at some point, but I changed my mind and focused on CS!</p>
+                    </details>
+                </div>
+    
+                <div class="wow"> <!-- section for the wooow sound fx-->
+                    <h3> WOW!</h3> <!-- implement a secret button that plays this lol-->
+                    <p> Play the audio for a surprise! </p>
+                    <audio controls>
+                        <source src="anime-wow-sound-effect.mp3" type="audio/ogg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+    
+                <div class="playlist"> <!-- section for the playlist-->
+                    <h3>PLAYLIST</h3>
+                    <iframe
+                        src="https://open.spotify.com/embed/playlist/69hOdti3VbHc5jC1gwc2PJ?utm_source=generator"
+                        width="100" 
+                        height="152" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy" 
+                        style="border: none; width: 100%; border-radius: 12px;">
+                    </iframe>
+                </div>
+
+                
+    
+            </div>
+            
+        </div>
+        
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+</html>

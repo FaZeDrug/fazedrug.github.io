@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natasha Tran</title>
+    <style>
+        canvas {
+            border: 1px solid black; /* Borders are allowed */
+        }
+        svg {
+            display: block;
+            margin: 10px auto;
+        }
+        #template-preview {
+            border: 1px solid black; /* Borders are allowed */
+            padding: 10px;
+            margin-top: 20px;
+        }
+        hello-banner {
+            display: block;
+            background-color: #f0f0f0;
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        emo-note {
+            display: block;
+            background-color: #2b2b2b;
+            color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            padding: 1rem;
+            margin: 1rem auto;
+            border: 1px solid #444;
+            border-radius: 8px;
+            text-align: center;
+        }
+    
+        emo-note::before {
+            content: "♡";
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    
+    </style>
+</head>
+
+<body> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+        <button>Toggle Theme</button>
+
+    </header>
+
+    <main>
+        
+        <search>
+            <form>
+                <input name="fsrch" id="fsrch" placeholder="Search Nat's Site">
+                <button type="submit">Go</button>
+            </form>
+        </search>
+
+        <section id="customElems">
+            <h3> Custom Elements Below</h3>
+            <hello-banner>
+                Custom Hello Banner for the custom elements`
+            </hello-banner>`
+            <emo-note>
+                "lost in the rhythm of my own thoughts."
+            </emo-note>
+        </section>
+        
+
+        <hgroup>
+            <h1>Experiments</h1>
+            <p>Experiment with me!</p>
+          </hgroup>
+        <dialog open> DIALOG HELLO HELLO HELLO!!!</dialog>
+        
+        <fieldset>
+            <legend> FAQ that I scrapped because I found a better tag</legend>
+            <dl>
+                <dt>What is your goal as a software engineer?</dt>
+                <dd>To build impactful applications that solve real-world problems.</dd>
+            
+                <dt>What are your hobbies?</dt>
+                <dd>Doing (my own) nails, webdevving, reading, and exploring new technologies.</dd>
+            
+                <dt>What is your favorite programming language?</dt>
+                <dd>C++. Truly the best OOP language, vectors are great!</dd>
+    
+                <dt>What is your favorite keyboard command?</dt>
+                <dd> <p>Pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> to screenshot (my own keybind).</p></dd>
+            </dl>
+        </fieldset>
+
+        <!-- erase the canvas, svg, template sections and their styles bc this is garbage-->
+        
+        <!-- canvas-->
+        <section>
+            <h2>Canvas Drawing</h2>
+            <p>This is a simple canvas with a rectangle drawn:</p>
+            <canvas id="myCanvas" width="300" height="150"></canvas>
+        </section>
+
+        <!-- SVG Section -->
+        <section>
+            <h2>SVG Example</h2>
+            <p>Simple SVG graphic:</p>
+            <svg width="200" height="100">
+                <rect width="200" height="100" fill="lightblue" />
+                <text x="50" y="55" fill="black" font-size="20">Hello SVG!</text>
+            </svg>
+        </section>
+
+        <!-- Template Section -->
+        <section id="template">
+            <h2>Template</h2>
+            <p>The following is an example of template usage:</p>
+            <div id="template-preview">
+                <h3>Fun Fact</h3>
+                <template>
+                    <p>A template is a reusable HTML fragment stored for future use.</p>
+                </template>
+                <p>(Template content is stored in the code and not displayed directly.)</p>
+            </div>
+        </section>
+
+        <section id="haiku">
+            <h3>Haiku about Coding</h3>
+            <pre>
+            Brackets close too soon,  
+            Debugging past midnight hour,  
+            Semicolon lost. 
+            </pre>
+        </section>
+
+        <label for="navigation">Jump to a Page:</label>
+        <select id="navigation" name="navigation" onchange="window.location.href=this.value;">
+            <optgroup label="Personal">
+                <option value="about.html">About Me</option>            </optgroup>
+            <optgroup label="Portfolio">
+                <option value="projects.html">Projects</option>
+                <option value="experience.html">Experience</option>
+            </optgroup>
+            <optgroup label="Extras">
+                <option value="experiments.html">Experiments</option>
+            </optgroup>
+        </select>
+
+        <section>
+            <h3>Extra Credit</h3>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>E</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <msup>
+                    <mi>c</mi>
+                    <mn>2</mn>
+                </msup>
+            </math>
+        </section>
+        
+    
+
+        <section id="receiptify">
+            <h2>January 2025 Receiptify</h2>
+            <table>
+                <caption>This is what I listened to in January 2025, my most listened on Spotify</caption>
+                <!-- Define columns using <colgroup> and <col> -->
+                <colgroup>
+                    <col style="text-align: center; width: 10%;"> <!-- QTY column -->
+                    <col style="text-align: left; width: 70%;">   <!-- ITEM column -->
+                    <col style="text-align: right; width: 20%;"> <!-- AMT column -->
+                </colgroup>
+                
+                <tr>
+                    <th>QTY</th>
+                    <th>ITEM</th>
+                    <th>AMT</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Ditto - NewJeans</td>
+                    <td>3:05</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Hype Boy - NewJeans</td>
+                    <td>2:58</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>ANTIFRAGILE - LE SSERAFIM</td>
+                    <td>3:06</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Pink Venom - BLACKPINK</td>
+                    <td>3:07</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>OMG - NewJeans</td>
+                    <td>3:31</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Feel My Rhythm - Red Velvet</td>
+                    <td>3:40</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Forever 1 - Girls' Generation</td>
+                    <td>4:03</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>Talk That Talk - TWICE</td>
+                    <td>3:01</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>Loco - ITZY</td>
+                    <td>3:10</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Feel Special - TWICE</td>
+                    <td>3:27</td>
+                </tr>
+                <tr>
+                    <th colspan="2">ITEM COUNT:</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th colspan="2">TOTAL:</th>
+                    <td>31:08</td>
+                </tr>
+            </table>
+        </section>
+        
+        <h3>Sample Date selector</h3>
+        <form>
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date">
+        </form>
+
+        <input list="colors" name="color">
+            <datalist id="colors">
+            <option value="Red">
+            <option value="Blue">
+            <option value="Green">
+            <option value="Yellow">
+            <option value="Purple">
+        </datalist>
+        
+        <textarea id="test" name="review" rows="4" cols="50">
+            This is a text area showing how awesome Nat is!
+        </textarea>
+    </main>
+
+    
+    <footer>
+        <p>&copy; <em><strong> 2025 Natasha Tran. All rights reserved.</strong></em></p>
+    </footer>
+</body>
+</html>

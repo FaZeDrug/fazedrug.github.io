@@ -1,0 +1,423 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face { /* this loads the font from google itself*/
+    font-family: "Inter";
+    src: url("https://fonts.gstatic.com/s/inter/v3/1cX3aA2DNXlZ5zE7G1l.woff2") format("woff2");
+} 
+
+body { /* the times new roman and san serif are the fallback fonts*/
+    font-family: "Inter", "Times New Roman", Arial, Helvetica, sans-serif; 
+
+    /* fade site in below*/
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+    }
+}
+
+html, body {
+    overflow-x: hidden; /*this  prevents horizontal scrolling */
+    max-width: 100vw; /* this ensures no element exceeds the screen width */
+}
+
+:root { /* making css vars*/
+    --text-color: black;
+    --background-color: white; /* be sure to use this variable somewhere in order to successfuly do the dark mode ting */
+    --border-color: black;
+}
+
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --border-color: white;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        order: 6; /* Moves the blurb below the image */
+    }
+
+    .about-image {
+        order: 0; /* Places image between the name and the blurb */
+    }
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 185px;
+    border-bottom: 2px solid var(--border-color); /* black line below navbar */
+    padding-bottom: 15px; /* the space between line and text */
+}
+
+nav .logo{ /*styling NT only*/
+    color: var( --text-color); /*ensures the text is a certain color, idk what happened here */
+    font-weight: bold;
+}
+
+nav a { /* i think this refers to the navbar's links */
+    font-size: 15px; /* changes the font size of the words in navbar */
+    text-decoration: none; /* removes the default underline link*/
+    color: var( --text-color);
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* change spacing between navbar words */
+}
+
+li { /* list elements (aka words of navbar) will be inline instead of a block of links */
+    display: inline;
+    align-items: end;
+}
+
+h1 { /* this is setting the h1 font for my name!! */
+    font-family: 'Pinyon Script', cursive;
+    align-items: center;
+    font-size: 48px; /* Adjust size to match Figma */
+    font-weight: 400; /* Ensure correct weight */
+}
+
+h1 { /* this is the pinyon script of my namet */
+    font-family: 'Pinyon Script', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var( --text-color);
+}
+
+
+/* centers the pinyon text of my name and sttyles*/
+.about-text h1 { 
+    text-align: center; /* centering my pinyon */
+    width: 100%; /* the full width is ensuringcentering */
+    font-size: 65px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.about-text h1 {
+    opacity: 1;
+}
+
+/* the main container to arrange elements in two columns (the left text and right pic)*/
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* adjust width with whatever */
+    margin: 50px auto; /* centers container, look into it */
+    padding: 20px;
+}
+
+/* left col for name, blurb, and links */
+.about-text {
+    max-width: 500px; /* prevents text from stretching too  much */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* spacing for the about blurb */
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: var( --text-color);
+}
+
+blockquote{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var( --text-color);
+}
+
+/* the styling for linked, git, resume, and email */
+.about-text address {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: normal;
+    color: var( --text-color)
+}
+
+.about-text address a {
+    text-decoration: none;
+    color: var(--text-color);
+    /* margin-right: 10px; this sucks dont add this line*/
+    margin-bottom: auto;
+}
+
+.about-text .email {
+    text-align: center;
+}
+
+
+
+/* right column for the big image of me*/
+.about-image img {
+    width: 250px; /* image size */
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    height: 40svh; /* img woll adapt to smallest viewpoert*/
+    object-fit: cover;
+}
+
+#moments-images h2 { /* the # selects an id */
+    text-align: center; /* centering the heading */
+    width: 100%;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#moments-images div {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* this adjusts  spacing betwn images */
+    flex-wrap: wrap; /* wraps the image on the same linee*/}
+
+figure {
+    text-align: center; /* centing both image and caption */    
+}
+
+figure img {
+    width: 250px;  /* fixed width */
+    height: 250px; /* fixed height */
+    object-fit: cover; /* gets rid of squishing image issue */
+    border: 1px solid var(--border-color);
+    border-radius: 10px; 
+}
+
+
+figcaption {
+    text-align: center; 
+    display: block; 
+    margin-top: 5px; /* spacing between image and caption */
+    color: var(--text-color);
+}
+.contact-container {
+    margin-top: 75px; /* Moves form lower */
+}
+
+
+.contact-form {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--border-color); /*this is the outer border */
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* spacing BTWN each field */
+    align-items: center;
+}
+
+.contact-form label{
+    text-align: left;
+    display: block;
+    width: 100%; 
+
+}
+
+/*allows the big message box to be big*/
+.contact-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #e0e0e0;
+    font-size: 16px;
+}
+
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: var(--border-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #333;
+}
+
+/* the below is the two output messages and any validation styling for the contact form*/
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info-message {
+    color: green;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Style invalid fields */
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Style valid fields */
+input:valid, textarea:valid {
+    border: 2px solid green;
+    background-color: #e6ffe6;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Success message styling */
+.info-message {
+    color: green;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+footer{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%; /* Makes form responsive to screen size */
+        padding: 20px;  /* Reduce padding for smaller screens */
+        border-width: 1.5px; /* Slightly thinner border for mobile */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Adjust input font size for smaller screens */
+        padding: 10px; /* Reduce padding inside inputs */
+    }
+
+    .contact-form button {
+        padding: 10px;
+        font-size: 14px; /* Reduce button size */
+    }
+}
+
+/* hamburger menu stuff below */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 100;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+    display: block;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* the mobile styles for menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--background-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* menu is shown when checked*/
+    .menu-checkbox:checked ~ .menu {
+        display: flex;
+    }
+}

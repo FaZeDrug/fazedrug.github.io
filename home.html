@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Natasha Tran, Computer Science, Software Engineer, UC San Diego">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <title>Natasha Tran</title>
+    <!-- defines relationship btwn current doc and an external resource (rel is relationship, href is the url of the linked doc) -->
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        #moments-images div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        img {
+            border: 1px solid black; /* this is border-color and border-style combined */
+        }
+    </style>
+</head>
+<body>
+    
+    <hello-world></hello-world>
+    <script>
+        // Define the custom element
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super(); // Call the parent constructor
+                console.log("Hello World!"); // Log to the console
+            }
+        }
+
+        // Register the custom element
+        customElements.define('hello-world', HelloWorld);
+    </script>
+    <header>
+        
+        <nav>
+            <div class="logo-container">
+                <div class="logo"> NT </div>
+                <button id="theme-toggle" class="theme-toggle">🌞</button> 
+            </div>
+            
+
+            
+
+                <!-- hamburger icon here -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            
+            <ul class = "menu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <!-- <li><a href="experiments.html">experiments</a></li> experiments is kinda bad -->
+            </ul>
+        </nav>
+        
+        <noscript>
+            <p class="noscript-warning">Dark mode toggle requires JavaScript to work.</p>
+        </noscript>
+        
+    </header>
+    <main>
+        <noscript>
+            <p>JavaScript is disabled in your browser. You should enable JS for this site to work!</p>
+        </noscript>
+
+        <!-- new bwlo -->
+        <div class="about-container">
+            <!-- left Side: name, bio blurb, links and emailll-->
+            <div class="about-text">
+                <h1> Natasha Tran</h1>
+
+                <p>
+                    I am <b>Natasha Tran</b>, a <del><abbr title="FaceBook, Amazon, Apple, Netflix, Google">FAANG</abbr> engineer</del> <ins>college third-year student</ins>. I am pursuing a career in the computer science field.
+                    <br><br>
+                    I am attending the University of Califonia, San Diego to obtain my BS in Computer Science, with prospects of becoming a Software Engineer or a Software Developer.
+                    <br><br>
+                    I am always looking for new opportunities for growth and ways to solve problems, which is why I am interested in CS! I hope to participate in the ever-growing development of technology through my ambitions.
+                </p>
+                <blockquote>
+                    "Chase my dreams, get it by any means"
+                    <cite> — Bladee</cite>
+                </blockquote>
+                <address>
+                    <a href="https://www.linkedin.com/in/nattran/">Linkedin</a> | 
+                    <a href="https://github.com/FaZeDrug">GitHub</a> | 
+                    <a href="resume.pdf">Resume</a>
+                    <br>
+                    <a href="mailto:natashamarietran@gmail.com" class="email">natashamarietran@gmail.com</a>
+                </address>
+            </div>
+    
+            <!-- right Side: big doctor img -->
+            <div class="about-image">
+                <picture>
+                    <img src="grass.jpg" alt="Natasha in a grass field">
+                </picture>
+            </div>
+        </div>
+
+        <section id="moments-images">
+            <!-- <div style="display: flex; justify-content: center; gap: 20px;"> -->
+            <h2>MOMENTS</h2>
+            <div>
+                <figure>
+                    <img src="robloxgrown.jpg" alt="Natasha playing Roblox on laptop, looking back at camera" width="200" height="200">
+                    <figcaption>Computer lover</figcaption>
+                </figure>
+                <figure>
+                    <img src="natgym.jpg" alt="Mirror selfie of Natasha flexing arm at gym, with big arm muscle" width="200" height="200">
+                    <figcaption>Gym lover</figcaption>
+                </figure>
+                <figure>
+                    <img src="glasses.jpg" alt="Natasha posing for selfie, wearing glasses and looking great" width="200" height="200">
+                    <figcaption>Fake glasses wearer</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-form">
+                <h2>CONTACT ME</h2>
+                <form action="https://httpbin.org/post" method="POST">
+                    <label for="name">name*</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    
+                    <label for="email">email*</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">subject*</label>
+                    <input type="text" id="subject" name="subject" required minlength="2" maxlength="100">
+                    
+                    <label for="message">message*</label>
+                    <textarea id="message" name="message" required minlength="10" maxlength="500"></textarea>
+
+                    <!-- error msgs -->
+                    <output id="char-error-message" class="error-message"></output>
+                    <output id="error-message" class="error-message"></output>
+                    <output id="info-message" class="info-message"></output>
+
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </section>
+        
+
+    </main>
+
+    
+    <footer>
+        <p>&copy; <em> 2025 Natasha Tran. All rights reserved. </em></p>
+    </footer>
+
+    <script src="contact.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+</html>

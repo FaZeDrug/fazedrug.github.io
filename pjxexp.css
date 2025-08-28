@@ -1,0 +1,349 @@
+/* Keep your existing global styles */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face { /* this loads the font from google itself */
+    font-family: "Inter";
+    src: url("https://fonts.gstatic.com/s/inter/v3/1cX3aA2DNXlZ5zE7G1l.woff2") format("woff2");
+} 
+
+body { /* the times new roman and sans serif are the fallback fonts */
+    font-family: "Inter", "Times New Roman", Arial, Helvetica, sans-serif; 
+}
+
+html, body {
+    overflow-x: hidden; /* prevents horizontal scrolling */
+    max-width: 100vw; /* ensures no element exceeds the screen width */
+}
+
+/* Light Mode (Default) */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --border-color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --border-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/*below are things for the dark mode light mode toggle*/
+
+.theme-toggle {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dark-mode .theme-toggle {
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between NT and the toggle */
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.theme-checkbox {
+    display: none;
+}
+
+.theme-label {
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.theme-checkbox:checked ~ .theme-label::before {
+    content: "🌙"; /* Moon icon for dark mode */
+}
+
+.theme-checkbox:not(:checked) ~ .theme-label::before {
+    content: "🌞"; /* Sun icon for light mode */
+}
+
+.noscript-warning {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 185px;
+    border-bottom: 2px solid var(--border-color); /* black line below navbar */
+    padding-bottom: 15px; /* space between line and text */
+}
+
+nav .logo { /* styling NT only */
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav a { /* navbar links */
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul { /* styling navbar ul links only, we have to do this bc there's ul in the proj blurb */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* change spacing between navbar words */
+}
+
+nav li {
+    display: inline;
+    align-items: end;
+}
+
+h2{
+    text-align: center;
+    margin-top: 30px; /* spacing between navbar and the "project" text*/
+    margin-bottom: 30px; /* spacing between navbar and the "project" text*/
+}
+
+/* Ensures project container is centered and structured properly */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px; /* Adjust width to match design */
+    margin: 0 auto; /* Centering */
+}
+
+/* Styles each project item */
+article {
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    align-items: stretch; /* Make sure both elements stretch equally */
+    background-color: var(--background-color);
+    /* border: 2px solid var(--border-color); leave this uncommented to see the border aorund each article*/
+    /* border-radius: 10px; */
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+
+    /* the below stuff is the stuff for the line inbetween the projects*/
+    border-bottom: 1px solid var(--border-color); /* this is a line separates each article */
+    padding-bottom: 20px; /* tha spacing before the separator */
+    margin-bottom: 20px; /* the space between sections */
+
+
+}
+
+/* this is so important because it removes the ine from very latlast project */
+article:last-child {
+    border-bottom: none; 
+}
+
+
+/* image gonna up the full height of the text */
+article figure {
+    flex: 0 0 250px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article img {
+    width: 100%;
+    height: 100%; 
+    width: 250px;  /* fixed width */
+    height: 250px; /* fixed height */
+    object-fit: cover; /* gets rid of squishing image issue */
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+/* styling the text container next to the image */
+.blurb {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+
+.blurb h1{ /* targets the role: swe line and also the time of the proj */
+    font-weight:normal;
+    font-size: 15px;
+    
+
+}
+
+/* bullet points for description */
+.blurb ul { /* tartgeitng ONLY the project descriptions */
+    padding-left: 20px;
+    list-style-type: disc; /* the bulletpoints will show bc of this line*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+        text-color: var(--text-color);
+
+}
+
+.blurb ul li {
+    margin-bottom: 5px;
+}
+
+.blurb p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.blurb p:last-child {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        width: 95%; 
+    }
+
+    article {
+        display: flex;
+        flex-direction: row; 
+        align-items: flex-start; 
+        padding: 15px;
+        gap: 10px;
+    }
+
+    article figure {
+        flex: 0 0 60px; /
+        margin: 0;
+        padding: 0;
+    }
+
+    article img {
+        width: 60px; 
+        height: 60px; 
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .blurb {
+        text-align: left;
+        flex: 1;
+    }
+
+    .blurb h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .blurb h1 {
+        font-size: 14px;
+        font-weight: normal; 
+        margin-bottom: 2px;
+    }
+
+    .blurb ul {
+        font-size: 12px; 
+    }
+
+    .blurb p {
+        font-size: 12px; 
+    }
+}
+
+
+footer{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* hamburger menu stuff below, aka the media queries that occur when user is on mobiel*/
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 100;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+    display: block;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* the mobile styles for menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--background-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* menu is shown when checked*/
+    .menu-checkbox:checked ~ .menu {
+        display: flex;
+    }
+}
+
