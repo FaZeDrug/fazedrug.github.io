@@ -88,6 +88,35 @@ body {
     content: "🌞"; /* Sun icon for light mode */
 }
 
+/* media queries below that ensure the NT and the toggle don't overlap on mobile */
+@media (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; /* this ensures NT never breaks */
+    }
+
+    .theme-toggle {
+        position: absolute;
+        left: calc(50% + 30px); /* makes sure the the sun icon slightly to the right */
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+}
+
+
+
 .noscript-warning {
     background-color: red;
     color: white;
@@ -212,24 +241,17 @@ blockquote{
     color: var( --text-color);
 }
 
-/* the styling for linked, git, resume, and email */
-.about-text address {
-    margin-top: 10px;
-    font-size: 16px;
-    font-style: normal;
-    color: var( --text-color)
-}
-
+/* the styling for linked, git, resume, and email CHANGE THIS STYLING FOR THE ABOUT LINKS BACK TO A PREVIOUS COMMIT CAUSE ION LIKE IT, just changing it for the assignment stuff*/
 .about-text address a {
-    text-decoration: none;
-    color: var(--text-color);
-    /* margin-right: 10px; this sucks dont add this line*/
-    margin-bottom: auto;
+    font-style: italic;  /* Make only the text italic */
+    color: #4A90E2;  /* A good readable blue for light and dark mode */
+    text-decoration: none; /* Remove underline */
 }
 
-.about-text .email {
-    text-align: center;
+.about-text address a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
+
 
 
 
