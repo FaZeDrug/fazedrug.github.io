@@ -1,0 +1,123 @@
+@import "./archive-header.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 54px 24px 80px;
+}
+
+.bio h1 {
+  margin: 0 0 22px;
+  font-size: 40px;
+  line-height: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.updated {
+  margin: 0 0 22px;
+  color: var(--muted-color);
+  font-size: 1rem;
+}
+
+.bio-copy {
+  display: grid;
+  gap: 32px;
+  max-width: 850px;
+}
+
+.bio-copy p,
+.social-links {
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.bio-copy p {
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links li {
+  display: flex;
+}
+
+.social-links li:not(:last-child)::after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.social-links a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.social-links a:not(:hover) {
+  text-decoration: none;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 28px 24px 20px;
+  color: var(--muted-color);
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .bio {
+    padding: 42px 28px 72px;
+  }
+
+  .bio h1 {
+    margin-bottom: 18px;
+    font-size: 34px;
+  }
+
+  .updated {
+    font-size: 1rem;
+  }
+
+  .bio-copy {
+    gap: 24px;
+  }
+
+  .bio-copy p,
+  .social-links {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+}
