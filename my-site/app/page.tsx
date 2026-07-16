@@ -1,3 +1,5 @@
+import { SocialLinks } from "./components/social-links";
+
 export default function Home() {
   return (
     <>
@@ -20,17 +22,7 @@ export default function Home() {
           </p>
         </div>
 
-        <ul className="social-links" aria-label="Profile links">
-          <li>
-            <a href="https://www.linkedin.com/in/nattran/">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/FaZeDrug">GitHub</a>
-          </li>
-          <li>
-            <a href="/resume.pdf">Resume</a>
-          </li>
-        </ul>
+        <SocialLinks />
       </main>
 
       <footer className="site-footer">&copy; 2026 Natasha Tran</footer>
