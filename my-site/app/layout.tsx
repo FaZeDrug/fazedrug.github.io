@@ -13,7 +13,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem("theme") === "dark" ? "dark" : "light";
+                document.documentElement.dataset.theme = theme;
+              } catch {
+                document.documentElement.dataset.theme = "light";
+              }
+            `,
+          }}
+        />
+      </head>
       <body>
         <div className="site-shell">
           <SiteHeader />

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -70,7 +71,7 @@ export function NavLinks() {
     >
       {navItems.map((item, index) => (
         <li key={item.href}>
-          <a
+          <Link
             ref={(node) => {
               linkRefs.current[index] = node;
             }}
@@ -80,7 +81,7 @@ export function NavLinks() {
             onFocus={() => moveIndicator(index)}
           >
             {item.label}
-          </a>
+          </Link>
         </li>
       ))}
       <span
