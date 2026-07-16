@@ -11,7 +11,8 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  /* font-family: Inter, Arial, Helvetica, sans-serif; inter fonttt*/
+  /* font-family: Inter, Arial, Helvetica, sans-serif; */
+  /* inter fonttt above */
   font-family: ui-sans-serif, system-ui, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -63,6 +64,8 @@ a {
 .bio-copy p {
   margin: 0;
 }
+
+
 
 .social-links {
   display: flex;
