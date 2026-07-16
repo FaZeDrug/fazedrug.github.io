@@ -109,8 +109,9 @@
 
 @media (max-width: 700px) {
   .site-nav {
-    align-items: flex-start;
-    padding: 34px 24px 16px;
+    align-items: center;
+    width: calc(100% - 48px);
+    padding: 34px 0 16px;
     gap: 20px;
   }
 
@@ -130,11 +131,12 @@
   }
 
   .nav-links {
-    gap: clamp(16px, 4vw, 24px);
+    gap: clamp(18px, 5vw, 28px);
   }
 
   .nav-links a {
     padding-bottom: 10px;
+    font-size: 15px;
   }
 
   .nav-indicator {
@@ -145,13 +147,11 @@
 
 @media (max-width: 430px) {
   .site-nav {
-    padding-right: 20px;
-    padding-left: 20px;
+    width: calc(100% - 40px);
   }
 
-  .brand,
   .nav-links a {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .brand {
@@ -159,6 +159,6 @@
   }
 
   .nav-links {
-    gap: 14px;
+    gap: 18px;
   }
 }
