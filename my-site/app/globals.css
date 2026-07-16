@@ -11,7 +11,8 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  /* font-family: Inter, Arial, Helvetica, sans-serif; inter fonttt*/
+  font-family: ui-sans-serif, system-ui, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
 }
