@@ -20,9 +20,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(100%, 1440px);
+  width: min(calc(100% - 96px), 1200px);
   margin: 0 auto;
-  padding: 100px 0 16px;
+  padding: 88px 0 16px;
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -30,7 +30,7 @@
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .brand-link {
@@ -79,7 +79,7 @@
 .nav-links {
   position: relative;
   display: flex;
-  gap: 46px;
+  gap: 40px;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -90,7 +90,7 @@
   position: relative;
   display: inline-block;
   padding: 0 0 12px;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -112,11 +112,6 @@
     align-items: flex-start;
     padding: 34px 24px 16px;
     gap: 20px;
-  }
-
-  .brand,
-  .nav-links a {
-    font-size: 18px;
   }
 
   .theme-switch {
