@@ -66,7 +66,7 @@ const memoryYears: Array<{ year: string; memories: Memory[] }> = [
       {
         date: "November 22nd",
         place: "La Jolla, CA",
-        alt: "Cal Day 2022",
+        alt: "ALLOCATIONNN",
         src: "/memories/2025/allocgirls.JPG",
         ratio: "4 / 3",
       },
@@ -103,7 +103,7 @@ const memoryYears: Array<{ year: string; memories: Memory[] }> = [
         date: "2022",
         place: "Berkeley, CA",
         alt: "Cal Day 2022",
-        src: "/memories/2022/briberk.jpeg",
+        src: "/memories/2022/briberk.jpg",
         ratio: "4 / 3",
       },
     ],
