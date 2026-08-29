@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <main className="bio">
-        <p className="updated">Last updated 08/23/26</p>
+        <p className="updated">Last updated 08/28/26</p>
         <h1>Natasha Tran</h1>
 
         <div className="bio-copy">
