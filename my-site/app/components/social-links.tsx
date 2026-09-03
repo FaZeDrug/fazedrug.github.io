@@ -6,6 +6,7 @@ const links = [
   { href: "https://www.linkedin.com/in/nattran/", label: "LinkedIn" },
   { href: "https://github.com/FaZeDrug", label: "GitHub" },
   { href: "/resume.pdf", label: "Resume" },
+  { href: "https://twitter.com/pocari2k", label: "X" },
 ];
 
 export function SocialLinks() {
