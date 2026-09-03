@@ -1,3 +1,29 @@
+import type { Metadata } from "next";
+import { siteConfig } from "../site-config";
+
+const pageDescription =
+  "Photos and memories from Natasha Tran's travels, milestones, and everyday life.";
+
+export const metadata: Metadata = {
+  description: pageDescription,
+  alternates: {
+    canonical: "/memories",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/memories",
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: pageDescription,
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.name,
+    description: pageDescription,
+  },
+};
+
 type Memory = {
   date: string;
   place: string;
