@@ -18,7 +18,12 @@ export function SocialLinks() {
     <ul className="social-links" aria-label="Profile links">
       {links.map(({ href, label }) => (
         <li key={label}>
-          <a href={href} onClick={() => handleClick(label)}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => handleClick(label)}
+          >
             {label}
           </a>
         </li>

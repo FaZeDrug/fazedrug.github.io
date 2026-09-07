@@ -28,7 +28,9 @@ export function NavLinks() {
 
   const activeIndex = Math.max(
     0,
-    navItems.findIndex((item) => item.href === pathname),
+    navItems.findIndex((item) => item.href === "/"
+      ? pathname === "/"
+      : pathname === item.href || pathname.startsWith(`${item.href}/`)),
   );
 
   function moveIndicator(index: number) {

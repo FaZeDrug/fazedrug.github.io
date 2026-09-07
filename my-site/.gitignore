@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local writing reference
+/content/writing/formatting-reference.mdx
+/content/writing/learning-to-notice.mdx

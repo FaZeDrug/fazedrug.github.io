@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "./site-config";
+import { getPosts } from "@/lib/writing";
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getPosts();
   return [
     {
       url: siteConfig.url,
@@ -20,5 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    ...posts.map((post) => ({
+      url: `${siteConfig.url}/writing/${post.slug}`,
+      lastModified: post.updated ?? post.date,
+      changeFrequency: "monthly" as const,
+      priority: 0.4,
+    })),
   ];
 }
