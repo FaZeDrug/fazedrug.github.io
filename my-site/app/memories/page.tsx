@@ -37,6 +37,13 @@ const memoryYears: Array<{ year: string; memories: Memory[] }> = [
     year: "2026",
     memories: [
       {
+        date: "September 15th",
+        place: "San Francisco, CA",
+        alt: "Memory from Corgi Cafe in San Francisco",
+        src: "/memories/2026/corgi-cafe.jpg",
+        ratio: "3 / 4",
+      },
+      {
         date: "August 26th",
         place: "San Francisco, CA (GitHub HQ)",
         alt: "Natasha at GitHub HQ in San Francisco",
