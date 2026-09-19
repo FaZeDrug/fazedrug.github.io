@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <main className="bio">
-        <p className="updated">Last updated September 15, 2026</p>
+        <p className="updated">Last updated September 18, 2026</p>
         <h1>Natasha Tran</h1>
 
         <div className="bio-copy">
@@ -18,7 +18,7 @@ export default function Home() {
             Previously, I interned at <a href="https://www.base86.com/" target="_blank" rel="noopener noreferrer">Base86</a> and <a href="https://owaves.com/" target="_blank" rel="noopener noreferrer">Owaves</a>, where I worked on software QA and helped improve product reliability.
           </p>
           <p>
-            My interests include side-questing, archive fashion, and going to hackathons (2x winner).
+            My interests include side-questing, <a href="https://www.fragrantica.com/@pocari2k#home" target="_blank" rel="noopener noreferrer">fragrances</a>, archive fashion, and going to hackathons (2x winner).
           </p>
         </div>
 
