@@ -18,7 +18,7 @@ export default function Home() {
             Previously, I interned at <a href="https://www.base86.com/" target="_blank" rel="noopener noreferrer">Base86</a> and <a href="https://owaves.com/" target="_blank" rel="noopener noreferrer">Owaves</a>, where I worked on software QA and helped improve product reliability.
           </p>
           <p>
-            My interests include side-questing, <a href="https://www.fragrantica.com/@pocari2k#home" target="_blank" rel="noopener noreferrer">fragrances</a>, archive fashion, and going to hackathons (2x winner).
+            My interests include side-questing, <a href="https://www.fragrantica.com/@pocari2k#home" target="_blank" rel="noopener noreferrer">fragrances</a>, archive fashion, and going to <a href="https://devpost.com/FaZeDrug?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" rel="noopener noreferrer">hackathons</a> (2x winner).
           </p>
         </div>
 
