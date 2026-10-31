@@ -37,7 +37,7 @@ const memoryYears: Array<{ year: string; memories: Memory[] }> = [
     year: "2026",
     memories: [
       {
-        date: "Wednesday, October 28th",
+        date: "October 28th",
         place: "San Francisco, CA",
         alt: "Friends together in San Francisco at night",
         src: "/memories/2026/san-francisco-october-28.jpg",
