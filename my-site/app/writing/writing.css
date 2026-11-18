@@ -10,7 +10,6 @@
   --writing-surface: #101320;
 }
 
-.writing-page a,
 .writing-page summary,
 .writing-page button {
   text-underline-offset: 4px;
@@ -89,12 +88,12 @@
   display: inline-block;
   color: var(--dark-grey);
   font-size: 14px;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .writing-back:hover {
   color: var(--text-color);
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 .writing-article > .writing-back {
@@ -152,14 +151,6 @@
 .post-body h3 {
   margin: 32px 0 14px;
   font-size: 20px;
-}
-
-.post-body a {
-  text-decoration: underline;
-}
-
-.post-body a:hover {
-  text-decoration-thickness: 2px;
 }
 
 .post-body strong {
@@ -346,12 +337,12 @@
 .post-body a[data-footnote-ref] {
   padding: 0 2px;
   font-variant-numeric: tabular-nums;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .post-body a[data-footnote-ref]:hover,
 .post-body a[data-footnote-backref]:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 .post-body section[data-footnotes] {
@@ -376,7 +367,7 @@
 
 .post-body a[data-footnote-backref] {
   padding: 3px;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .post-tweet {

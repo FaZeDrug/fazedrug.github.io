@@ -28,6 +28,17 @@ body {
 
 a {
   color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--muted-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover,
+a:focus-visible {
+  /* Black in light mode, white in dark mode. */
+  text-decoration-color: var(--text-color);
 }
 
 .site-shell {
