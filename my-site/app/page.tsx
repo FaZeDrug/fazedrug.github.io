@@ -12,7 +12,7 @@ export default function Home() {
             I like building software. I am a recent graduate (CS @ UC San Diego '26).
           </p>
           <p>
-            Currently, I am an LLM Evaluator @ <a href="https://www.mercor.com/" target="_blank" rel="noopener noreferrer">Mercor</a> where I evaluate AI models and contribute to RLHF pipelines for leading AI labs.
+            Currently, I am an LLM Evaluator at <a href="https://www.mercor.com/" target="_blank" rel="noopener noreferrer">Mercor</a> where I evaluate AI models and contribute to RLHF pipelines for leading AI labs.
           </p>
           <p>
             Previously, I interned at <a href="https://www.base86.com/" target="_blank" rel="noopener noreferrer">Base86</a>, building invoice tools for an AI dental supply procurement platform, and <a href="https://owaves.com/" target="_blank" rel="noopener noreferrer">Owaves</a>, developing features for a 30K-user iOS wellness app.
