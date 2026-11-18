@@ -104,6 +104,81 @@ a:focus-visible {
   margin: 0 10px;
 }
 
+.open-source {
+  margin-top: 64px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.open-source h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.open-source-repositories,
+.open-source-contributions {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.open-source-repositories {
+  gap: 32px;
+}
+
+.open-source-repository-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.open-source-repository-link {
+  min-width: 0;
+  color: var(--text-color);
+  overflow-wrap: anywhere;
+}
+
+.open-source-owner,
+.open-source-stars,
+.open-source-description {
+  color: var(--dark-grey);
+}
+
+.open-source-stars {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.open-source-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.open-source-contributions {
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.open-source-contributions li {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: baseline;
+  gap: 12px;
+}
+
+.open-source-contributions a {
+  font-size: 14px;
+}
+
 .site-footer {
   margin-top: auto;
   padding: 28px 24px 20px;

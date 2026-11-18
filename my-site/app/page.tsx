@@ -1,3 +1,4 @@
+import { OpenSource } from "./components/open-source";
 import { SocialLinks } from "./components/social-links";
 
 export default function Home() {
@@ -23,8 +24,19 @@ export default function Home() {
         </div>
 
         <SocialLinks />
+        
+        {/* <div className="oss">
+          <p> Open Source Contributions</p>
+          <p><a href="https://github.com/e2e-inc/e2e" target="_blank" rel="noopener noreferrer">e2e</a></p>
+          <p> Agentic end-to-end testing framework </p>
+          <p> CLI dot reporter <a href="https://github.com/e2e-inc/e2e/pull/1911" target="_blank" rel="noopener noreferrer">#1911</a> </p>
+
+        </div> */}
+
+        <OpenSource />
       </main>
 
+      
       <footer className="site-footer">&copy; 2026 Natasha Tran</footer>
     </>
   );
