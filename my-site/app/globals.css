@@ -111,7 +111,7 @@ a:focus-visible {
 }
 
 .open-source h2 {
-  margin: 0 0 10px;
+  margin: 0 0 10px; /* change this to 28 once i have more repos lmao*/
   font-size: 20px;
   line-height: 1.4;
   font-weight: 500;
