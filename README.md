@@ -1,5 +1,7 @@
 hi
 
+https://natashatran.dev
+
 todo next:
 + animations when clicking other pages
 + finish writing page
