@@ -164,15 +164,16 @@ a:focus-visible {
 }
 
 .open-source-contributions {
-  gap: 7px;
+  display: block;
   margin-top: 13px;
 }
 
 .open-source-contributions li {
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  align-items: baseline;
-  gap: 12px;
+  display: inline;
+}
+
+.open-source-contributions li + li::before {
+  content: ", ";
 }
 
 .open-source-contributions a {

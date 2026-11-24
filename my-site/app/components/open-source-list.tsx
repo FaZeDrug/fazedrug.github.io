@@ -64,7 +64,6 @@ export function OpenSourceList({ projects }: { projects: OpenSourceProject[] }) 
                     >
                       #{pr}
                     </a>
-                    <span>{title}</span>
                   </li>
                 ))}
               </ul>
